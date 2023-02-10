@@ -1,4 +1,4 @@
-# config-generator
+# v2ray/xray Config generator
 ## This tool help you to generate Trojan-Vmess-Vless configs with different server names using a list of domain or IP
 
 ## Usage 
