@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Rubik, Tahoma;
+}
+
+textarea {
+    resize: none;
+    background: transparent;
+}
+
+.container {
+    text-align: left;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+}
+
+.main-from {
+    max-width: 30rem;
+    width: 100%;
+    margin: 1rem 2rem;
+    padding: 60px 35px 35px 35px;
+    border-radius: 40px;
+    background: #ecf0f3;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sub-title {
+    text-align: left;
+    font-size: 1.25rem;
+    padding-top: 7px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.help {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #242627;
+}
+
+.fields {
+    width: 100%;
+    padding: 15px 5px 5px 5px;
+}
+
+.item {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+        inset -8px -8px 8px #ffffff;
+}
+
+.textarea-field {
+    width: 100%;
+    height: 8rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.textarea-field:focus {
+    outline: 0;
+}
+
+.fields textarea {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 1.25rem 2rem;
+    width: 100%;
+    position: relative;
+}
+
+.clear-btn {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background: #D2042D;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.copy-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: #24cfaa;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.generate-btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    text-align: center;
+    background: #24cfaa;
+    box-shadow: 3px 3px 8px #b1b1b1,
+        -3px -3px 8px #ffffff;
+    transition: 0.5s;
+}
+
+.generate-btn:hover {
+    background: #2fdbb6;
+}
+
+.generate-btn:active {
+    background: #1da88a;
+}
+
+.result label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.result {
+    display: none;
+}
+
+/* switch */
+.switch-container {
+    width: 100%;
+    height: 100px;
+    background: #ecf0f3;
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.switch {
+    position: relative;
+    width: 100px;
+    height: 55px;
+    margin: 15px;
+    font: 600 15px Arial;
+    border-radius: 25px;
+
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+    background: #e0e0e0;
+    box-shadow: inset 8px 8px 29px #bebebe, inset -15px -15px 29px #ffffff;
+    transition: 0.4s;
+    color: #424250;
+}
+
+.slider:before {
+    position: absolute;
+    content: "OFF";
+    text-align: center;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    left: 10px;
+    bottom: 5px;
+    background: #abaaaa;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2),
+        -2px -2px 2px 0px rgba(89, 83, 116, 0.5);
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+/*----is ON----*/
+
+input:checked+#slider-switch {
+    background: #24cfaa;
+    box-shadow: inset 5px 5px 8px 1px #55857a, inset -3px -3px 8px 0px #75b2a5, inset -2px -2px 2px 1px #73d2be;
+}
+
+input:checked+#slider-switch:before {
+    content: "ON";
+    transform: translateX(36px);
+    background-color: #2fdbb6;
+    box-shadow: 2px 2px 2px 1px #3a5d55, -2px -2px 2px 0px #629d90;
+    color: #fff;
+
+}
+
+.result .item {
+    position: relative;
+}

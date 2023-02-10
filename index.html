@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>xray - v2ray - config gen</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-from">
+            <div class="title">config generator</div>
+            <div class="sub-title">
+                This tool help you to generate Trojan-Vmess-Vless configs with different server names using a list of
+                domains or ips
+            </div>
+            <!-- <div class="help">
+                Using groups : It generates subscription group text base on 3 characters after @ (in PS or Remark)
+                example : @NBA @ITL @USA @IRI ...
+                for each group it generates normal configs and a subscription group
+            </div> -->
+            <form class="fields">
+                <div class="item">
+                    <span class="clear-btn" id="clear-servernames-btn">clear</span>
+                    <textarea type="text" class="textarea-field" id="serverNames"
+                        placeholder="each ip or domain in one line : 1.0.0.1 &#13;google.com"></textarea>
+                </div>
+
+                <div class="item">
+                    <span class="clear-btn" id="clear-configs-btn">clear</span>
+                    <textarea type="text" id="configs" class="textarea-field"
+                        placeholder="each config in one line : &#13;trojan:// &#13;vmess:// &#13;vless://"></textarea>
+                </div>
+
+                <div class="result" id="result">
+                    <label>configs:</label>
+                    <div class="item">
+                        <label for="simple-result" class="copy-btn">copy</label>
+                        <textarea type="text" id="simple-result"></textarea>
+                    </div>
+                    <label>base64 for subscription:</label>
+                    <div class="item">
+                        <label for="base64-result" class="copy-btn">copy</label>
+                        <textarea type="text" id="base64-result""></textarea>
+                </div>
+                </div>
+
+                <!-- <div class=" switch-container">
+                    Using groups
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider round" id="slider-switch"></span>
+                    </label>
+                </div> -->
+                <button class="generate-btn" id="generate-btn">Generate</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
+<!-- بر اساس 3 حرف اول پی اس بعد از ات ساین میام و چند تا ساب مختلف رو میسازم -->
+<!-- برای هر گروه یه دونه لینک ها عادی و یه ساب لینک می سازم -->
+<!-- بعد در آخر هم اسم هر گروه رو بالای اون متن که دکمه کپی داره هم میزارم -->
