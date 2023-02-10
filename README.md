@@ -19,4 +19,4 @@
 #### line breaks
 #### trojan://
 #### .....
-#### if you are copying the configs from any v2ray/xray clients you don't need to change it manually
+#### note: if you are copying the configs from any v2ray/xray clients you don't need to change it manually
