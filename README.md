@@ -1,5 +1,5 @@
 # config-generator
-## This tool help you to generate Trojan-Vmess-Vless configs with different server names using a list of domains or ips
+## This tool help you to generate Trojan-Vmess-Vless configs with different server names using a list of domain or IP
 
 ## Usage 
 ### list of IP or domain must separated by line breaks (\n or enter)
