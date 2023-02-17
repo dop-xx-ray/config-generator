@@ -72,12 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
         copyToClipBoard(simpleResult);
     });
 
-    serverNames.addEventListener('keypress', e => {
-        if (e.key === "Enter") {
-            e.preventDefault();
-        }
-    });
-
     let generateBtn = document.querySelector("#generate-btn");
     generateBtn.addEventListener("click", e => {
         e.preventDefault();
