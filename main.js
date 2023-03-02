@@ -1,4 +1,3 @@
-
 const copyToClipBoard = inputElement => {
     const text = inputElement.value;
     if (!text) return;
@@ -55,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let simpleResult = document.querySelector("#simple-result");
     let base64Result = document.querySelector("#base64-result");
+    let IOSbase64Result = document.querySelector("#ios-base64-result");
 
     clear_servernames_btn.addEventListener('click', () => {
         serverNames.value = '';
@@ -67,7 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
     base64Result.addEventListener('click', () => {
         copyToClipBoard(base64Result);
     });
-
+    IOSbase64Result.addEventListener('click', () => {
+        copyToClipBoard(IOSbase64Result);
+    });
     simpleResult.addEventListener('click', () => {
         copyToClipBoard(simpleResult);
     });
@@ -79,11 +81,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let { trojan, vmess, vless } = defineProtocol(configsInput.value)
         let configs = formValidation([serverNames, trojan, vmess, vless]);
-        let [base64, simpleConfigs] = subscriptionText(configs)
+        let [base64, simpleConfigs, iosBase64] = subscriptionText(configs)
 
         simpleResult.innerHTML = simpleConfigs;
         base64Result.innerHTML = base64;
-        console.log([base64, simpleConfigs])
+        IOSbase64Result.innerHTML = iosBase64;
+
+        console.log([base64, simpleConfigs, iosBase64])
         result.style.display = "block";
         return false;
     });
@@ -220,8 +224,10 @@ const subscriptionText = configArray => {
     if (configArray.length === 0) return;
 
     let text = "";
+    let iosBase64 = "";
     configArray.forEach(config => {
         text += `${config}\n`;
+        iosBase64 += `${btoa(config)}\n`;
     });
-    return [btoa(text), text];
+    return [btoa(text), text, iosBase64];
 }
