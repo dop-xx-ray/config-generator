@@ -17,27 +17,20 @@
         <div class="main-from">
             <div class="title">config generator</div>
             <div class="sub-title">
-                This tool help you to generate Trojan-Vmess-Vless configs with different server addresses using a list of
-                domains or ips
+                This tool help you to generate Trojan-Vmess-Vless configs with different server addresses using a list
+                of domain or ip
             </div>
-            <!-- <div class="help">
-                Using groups : It generates subscription group text base on 3 characters after @ (in PS or Remark)
-                example : @NBA @ITL @USA @IRI ...
-                for each group it generates normal configs and a subscription group
-            </div> -->
             <form class="fields">
                 <div class="item">
                     <span class="clear-btn" id="clear-servernames-btn">clear</span>
                     <textarea type="text" class="textarea-field" id="serverNames"
                         placeholder="each ip or domain in one line : 1.0.0.1 &#13;google.com"></textarea>
                 </div>
-
                 <div class="item">
                     <span class="clear-btn" id="clear-configs-btn">clear</span>
                     <textarea type="text" id="configs" class="textarea-field"
                         placeholder="each config in one line : &#13;trojan:// &#13;vmess:// &#13;vless://"></textarea>
                 </div>
-
                 <div class="result" id="result">
                     <label>configs:</label>
                     <div class="item">
@@ -50,15 +43,9 @@
                         <textarea type="text" id="base64-result""></textarea>
                 </div>
                 </div>
+                <button class=" generate-btn" id="generate-btn">Generate</button>
 
-                <!-- <div class=" switch-container">
-                    Using groups
-                    <label class="switch">
-                        <input type="checkbox" />
-                        <span class="slider round" id="slider-switch"></span>
-                    </label>
-                </div> -->
-                <button class="generate-btn" id="generate-btn">Generate</button>
+                <h3 class="source">Source code : <a href="https://github.com/dop-xx-ray/config-generator">Config Generator</a></h3>
             </form>
         </div>
     </div>
@@ -66,8 +53,3 @@
 </body>
 
 </html>
-
-
-<!-- بر اساس 3 حرف اول پی اس بعد از ات ساین میام و چند تا ساب مختلف رو میسازم -->
-<!-- برای هر گروه یه دونه لینک ها عادی و یه ساب لینک می سازم -->
-<!-- بعد در آخر هم اسم هر گروه رو بالای اون متن که دکمه کپی داره هم میزارم -->
