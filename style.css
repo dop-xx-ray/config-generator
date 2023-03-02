@@ -130,6 +130,7 @@ textarea {
     font-family: 'Lato', sans-serif;
     color: #fff;
     text-align: center;
+    margin-bottom: 2rem;
     background: #24cfaa;
     box-shadow: 3px 3px 8px #b1b1b1,
         -3px -3px 8px #ffffff;
@@ -153,81 +154,16 @@ textarea {
     display: none;
 }
 
-/* switch */
-.switch-container {
-    width: 100%;
-    height: 100px;
-    background: #ecf0f3;
-    border-radius: 15px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.switch {
-    position: relative;
-    width: 100px;
-    height: 55px;
-    margin: 15px;
-    font: 600 15px Arial;
-    border-radius: 25px;
-
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 25px;
-    background: #e0e0e0;
-    box-shadow: inset 8px 8px 29px #bebebe, inset -15px -15px 29px #ffffff;
-    transition: 0.4s;
-    color: #424250;
-}
-
-.slider:before {
-    position: absolute;
-    content: "OFF";
-    text-align: center;
-    line-height: 45px;
-    width: 45px;
-    height: 45px;
-    left: 10px;
-    bottom: 5px;
-    background: #abaaaa;
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2),
-        -2px -2px 2px 0px rgba(89, 83, 116, 0.5);
-    border-radius: 20px;
-    transition: 0.4s;
-}
-
-/*----is ON----*/
-
-input:checked+#slider-switch {
-    background: #24cfaa;
-    box-shadow: inset 5px 5px 8px 1px #55857a, inset -3px -3px 8px 0px #75b2a5, inset -2px -2px 2px 1px #73d2be;
-}
-
-input:checked+#slider-switch:before {
-    content: "ON";
-    transform: translateX(36px);
-    background-color: #2fdbb6;
-    box-shadow: 2px 2px 2px 1px #3a5d55, -2px -2px 2px 0px #629d90;
-    color: #fff;
-
-}
-
 .result .item {
     position: relative;
+}
+
+
+.source {
+    text-align: center;
+}
+
+.source a {
+    color: #737373;
+    text-decoration: none;
 }
